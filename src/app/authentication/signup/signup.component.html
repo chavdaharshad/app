@@ -1,0 +1,142 @@
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <div class="card">
+      <div class="card-header">
+
+        <h1>Amozon</h1>
+        <h3>Sign up</h3>
+        <div class="d-flex justify-content-end social_icon">
+          <span><i class="fab fa-facebook-square"></i></span>
+          <span><i class="fab fa-google-plus-square"></i></span>
+          <span><i class="fab fa-twitter-square"></i></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="signupForm">
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <div>
+              <input 
+                  formControlName="firstName" 
+                  type="text" 
+                  class="form-control" 
+                  placeholder="firstName" 
+                  required
+              >
+            </div>
+
+            <div class="help-bpx" *ngIf="signupForm.controls['firstName'].touched 
+                          && signupForm.controls['firstName'].invalid">
+              please enter vaild firstName
+            </div>
+
+
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <div>
+              <input 
+                formControlName="lastName" 
+                type="text" 
+                class="form-control" 
+                placeholder="lastName" 
+                required
+              >
+            </div>
+            <span class="help-bpx" *ngIf="signupForm.controls['lastName'].touched 
+                          && signupForm.controls['lastName'].invalid">
+              please enter vaild lastName</span>
+
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <div>
+              <input 
+                formControlName="email" 
+                type="email" 
+                class="form-control" 
+                placeholder="Email adress"
+              >
+            </div>
+            <span class="help-bpx" *ngIf="signupForm.controls['email'].touched 
+                           && signupForm.controls['email'].invalid">
+              please enter vaild email</span>
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <div>
+              <input 
+                formControlName="phone" 
+                type="text" 
+                class="form-control" 
+                placeholder="phone" 
+                required
+              >
+            </div>
+            <span class="help-bpx" *ngIf="signupForm.controls['phone'].touched 
+                          && signupForm.controls['phone'].invalid">
+              please enter vaild number</span>
+
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <div>
+              <input 
+                formControlName="password" 
+                type="password" 
+                class="form-control" 
+                placeholder="password" 
+                required
+              >
+            </div>
+            <span class="help-bpx" *ngIf="signupForm.controls['password'].touched 
+                          && signupForm.controls['password'].invalid">
+              please enter vaild passwrod</span>
+
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <div>
+              <input 
+                formControlName="cPassword" 
+                type="cPassword" 
+                class="form-control" 
+                placeholder="cPassword" 
+                required
+              >
+            </div>
+            <span class="help-bpx" *ngIf="signupForm.controls['cPassword'].touched 
+                          && signupForm.controls['cPassword'].invalid">
+              please enter vaild passwrod</span>
+
+          </div>
+          <div class="row align-items-center remember">
+            <input type="checkbox">Remember Me
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn float-right login_btn" [disabled]="!signupForm.valid" (click)="signup()">
+              signup
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-center links">
+          Don't have an account?<a href="login">Sign in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
