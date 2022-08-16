@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div id="wrapper">
 
     <!-- Sidebar -->
@@ -16,7 +17,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="#">
+            <a class="nav-link"  routerLinkActive="router-link-active" >
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -31,7 +32,7 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" [routerLink]="['/dashboard/product']">
+            <a class="nav-link collapsed" [routerLink]="['/admin/product1']">
                 <i class="fas fa-fw fa-cog"></i>
                 <span>Products</span>
             </a>
@@ -44,28 +45,18 @@
 
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" [routerLink]="['/dashboard/cart']" routerLinkActive="router-link-active" >
-                <i class="fas fa-fw fa-wrench"></i>
-                <span>art</span>
-            </a>
+            <a class="nav-link" [routerLink]="['/admin/list']" routerLinkActive="router-link-active" >
+                <i class="fas fa-fw fa-table"></i>
+                <span>Tables</span></a>
         </li>
 
         <!-- Divider -->
-        <hr class="sidebar-divider">
-
-        <!-- Heading -->
-        <div class="sidebar-heading">
-            Addons
-        </div>
+        
 
         <!-- Nav Item - Pages Collapse Menu -->
        
         <!-- Nav Item - Tables -->
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                <i class="fas fa-fw fa-table"></i>
-                <span>Tables</span></a>
-        </li>
+        
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
@@ -83,4 +74,4 @@
         </div>
 
     </ul>
-   
+   <app-contain></app-contain>

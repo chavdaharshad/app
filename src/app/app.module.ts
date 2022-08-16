@@ -1,4 +1,3 @@
-import { AdminModule } from './admin/admin.module';
 import { NgModule } from '@angular/core';
 import * as $ from 'jquery';
 import { AppRoutingModule } from './app-routing.module';
@@ -7,10 +6,11 @@ import { AuthenticationModule } from './authentication';
 import { CoreModule } from './core';
 import { SharedModule } from './shared';
 import { BrowserModule } from '@angular/platform-browser';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

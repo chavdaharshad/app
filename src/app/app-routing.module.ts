@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminModule } from './admin/admin.module';
+import { AdminRoutes } from './admin/admin.routing';
 import { BlankComponent, FullComponent } from './shared';
 
 const routes: Routes = [
@@ -20,6 +22,11 @@ const routes: Routes = [
     ]
   },
   {
+    path:'admin',
+    loadChildren: () =>
+    import('./admin/admin.module').then(m => m.AdminModule)
+  },
+  {
     path: '',
     component: BlankComponent,
     children: [
@@ -32,10 +39,10 @@ const routes: Routes = [
       }
     ]
   },
-  // {
-  //   path: '**',
-  //   redirectTo: '/404'
-  // }
+  {
+    path: '**',
+    redirectTo: '/404'
+  }
 ];
 
 @NgModule({
