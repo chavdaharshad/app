@@ -1,6 +1,7 @@
 import { AuthenticationGuard } from './../core/authentication/authentication.guard';
 import { Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProductComponent } from './product/product.component';
 
 
 export const DashboardRoutes: Routes = [
@@ -11,9 +12,11 @@ export const DashboardRoutes: Routes = [
       {
         path: '',
         component: DashboardComponent,
-        data: {
-          title: 'Dashboard'
-        }
+        
+      },
+      {
+        path:'product',
+        component: ProductComponent
       }
     ]
   }
