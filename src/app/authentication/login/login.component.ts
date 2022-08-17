@@ -39,7 +39,8 @@ export class LoginComponent implements OnInit {
           console.log(credentials);
           this.router.navigate(['/'], {
             replaceUrl: true
-          });
+          }); 
+         
         },
         (error: any) => {
           console.log(`Login error: ${error}`);

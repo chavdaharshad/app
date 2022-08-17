@@ -2,17 +2,23 @@
 </app-header>
 
 <h1>Product</h1>
-<div class="single-product" *ngfor="let product of products">
+<form action="/admin/product1">
+    <label for="myfile">Select a file:</label>
+    <input type="file" id="myfile" name="myfile"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+<div class="single-product">
     <div class="product-f-image" >
-        <img src="{{product.img}}" alt="">
+        
+        <!-- <img src="{{product.img}}" alt=""> -->
         <div class="product-hover">
             <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
             <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
         </div>
     </div>
     
-    <h2>{{product.name}}</h2>
+    <!-- <h2>{{product.name}}</h2> -->
     <div class="product-carousel-price">
-        <ins>{{product.price}}</ins> <del>$999.00</del>
+        <!-- <ins>{{product.price}}</ins> <del>$999.00</del> -->
     </div> 
 </div>

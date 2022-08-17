@@ -10,8 +10,6 @@ import { Product } from '../admin.model';
 export class Product1Component implements OnInit {
   
  products: Product[]=[
-    new Product( 
-    'https://pinchofyum.com/wp-content/assets/images/cta/poy-ecookbook-2021.png','book',1000)
   ];
  
   constructor() { }

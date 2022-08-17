@@ -1,6 +1,5 @@
 {
-  "signup": [
-    {
+  "signup":    {
       "id": 1,
       "firstName": "harshad",
       "lastName": "chavda",
@@ -9,16 +8,7 @@
       "password": "1234567890",
       "cPassword": "1234567890"
     },
-    {
-      "firstName": ",d lk",
-      "lastName": "skmv",
-      "email": "ksddm@mklsf",
-      "phone": "mdkmmkmmwsf",
-      "password": "eds",
-      "cPassword": "wdwf",
-      "id": 2
-    }
-  ],
+   
   "profile": {
     "name": "typicode"
   }

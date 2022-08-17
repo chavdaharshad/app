@@ -5,8 +5,8 @@
 export const environment = {
   env: 'DEFAULT',
   production: false,
-  serverBaseUrl: 'http://localhost:3000/',
-  serverUrl: 'http://localhost:3000'
+  serverBaseUrl: 'http://localhost:1400',
+  serverUrl: 'http://localhost:1400/api/v1/auth'
 };
 
 /*

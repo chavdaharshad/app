@@ -30,7 +30,7 @@ export class AuthenticationService {
   login(
     payload: Authentication.LoginPayload
   ): Observable<Authentication.Credentials> {
-    return this.httpClient.get('/signup').pipe(
+    return this.httpClient.post('/login', payload).pipe(
       map((body: any) => {
         this.setCredentials(body);
         return body;

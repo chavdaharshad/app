@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { finalize } from 'rxjs/operators';
 import { Authentication } from 'src/app/core/model/authentication.model';
+import { ConfirmPasswordValidator } from 'src/app/core/service/confirm-password.validator';
 
 @Component({
   selector: 'app-signup',
@@ -48,12 +49,14 @@ export class SignupComponent implements OnInit {
 
   private createForm() {
     this.signupForm = this.formBuilder.group({
-      firstName: ['', [Validators.required]],
-      lastName: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required,Validators.minLength(10)]],
+      name: ['', [Validators.required]],
+      personalEmail: ['', [Validators.required, Validators.email]],
+      contact: ['', [Validators.required,Validators.minLength(10)]],
       password: ['', Validators.required],
       cPassword: ['', Validators.required]
+    },{
+        validator: ConfirmPasswordValidator("password", "cPassword")
+
     });
   }
 }

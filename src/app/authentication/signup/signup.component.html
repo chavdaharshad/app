@@ -12,21 +12,13 @@
             </div>
             <form [formGroup]="signupForm">
               <div class="form-group row">
-                <div class="col-sm-6 mb-3 mb-sm-0">
-                  <input formControlName="firstName" type="text" class="form-control form-control-user"
+                <div class="col-sm-12 mb-3 mb-sm-0">
+                  <input formControlName="name" type="text" class="form-control form-control-user"
                     id="exampleFirstName" placeholder="First Name">
-                  <div class="help-bpx" *ngIf="signupForm.controls['firstName'].touched 
-                                        && signupForm.controls['firstName'].invalid">
+                  <div class="help-bpx" *ngIf="signupForm.controls['name'].touched 
+                                        && signupForm.controls['name'].invalid">
                     please enter vaild firstName
                   </div>
-                </div>
-                <div class="col-sm-6">
-                  <input type="text" formControlName="lastName" class="form-control form-control-user"
-                    id="exampleLastName" placeholder="Last Name">
-                  <span class="help-bpx" *ngIf="signupForm.controls['lastName'].touched 
-                                        && signupForm.controls['lastName'].invalid">
-                    please enter vaild lastName</span>
-
                 </div>
               </div>
 
@@ -34,16 +26,16 @@
               <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                   <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                    placeholder="Email Address" formControlName="email">
-                  <span class="help-bpx" *ngIf="signupForm.controls['email'].touched 
-                                    && signupForm.controls['email'].invalid">
+                    placeholder="Email Address" formControlName="personalEmail">
+                  <span class="help-bpx" *ngIf="signupForm.controls['personalEmail'].touched 
+                                    && signupForm.controls['personalEmail'].invalid">
                     please enter vaild email</span>
                 </div>
                 <div class="col-sm-6">
-                  <input formControlName="phone" type="text" class="form-control" placeholder="phone" required>
+                  <input formControlName="contact" type="text" class="form-control" placeholder="phone" required>
 
-                  <span class="help-bpx" *ngIf="signupForm.controls['phone'].touched 
-                                     && signupForm.controls['phone'].invalid">
+                  <span class="help-bpx" *ngIf="signupForm.controls['contact'].touched 
+                                     && signupForm.controls['contact'].invalid">
                     please enter vaild number</span>
 
                 </div>
